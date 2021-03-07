@@ -20,22 +20,10 @@
     <div class="col-6 pl-10 pt-5">
       <a href=""><div class="news-title h2">News</div></a>
       <ul>
-          <li >
+          <li *ngFor="let item of news">
             <div class="news">
-              <p class="h5">Animals got TV</p>
-              <p class="date">5 March 2021</p>
-            </div>
-          </li>
-          <li class="news">
-            <div>
-              <p class="h5">Xiaomi creates techno-pictures for geeks</p>
-              <p class="date">5 March 2021</p>
-            </div>
-          </li>
-          <li class="news">
-            <div>
-              <p class="h5">The neural network reconstructed the picture from brain</p>
-              <p class="date">5 March 2021</p>
+              <p class="h5">{{item.title}}</p>
+              <p class="date">{{item.date | date}}</p>
             </div>
           </li>
       </ul>

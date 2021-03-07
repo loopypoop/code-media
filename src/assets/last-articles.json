@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "X86 and ARM processors - what's the difference?",
+    "subtitle": "Is it true that the processor in your mobile phone is more powerful than in your computer?",
+    "type": "Questions",
+    "date": "2021-02-22T00:24:49.354+00:00",
+    "difficulty": "Medium",
+    "img": "https://thecode.media/wp-content/uploads/2021/03/photo_2021-03-02-13.30.46-1080x718.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "10 main constructs of Swift language",
+    "subtitle": "Quick language guide.",
+    "type": "How to",
+    "date": "2021-03-03T00:33:19.394+00:00",
+    "difficulty": "Medium",
+    "img": "https://thecode.media/wp-content/uploads/2021/03/photo_2021-03-04-12.09.20-1080x718.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Piano on JavaScript for Chrome",
+    "subtitle": "Not 'Wild West World', but ok.",
+    "type": "How to",
+    "date": "2021-02-27T00:51:12.134+00:00",
+    "difficulty": "Easy",
+    "img": "https://thecode.media/wp-content/uploads/2021/03/photo_2021-03-03-12.51.40-1080x718.jpeg"
+  }
+]
+

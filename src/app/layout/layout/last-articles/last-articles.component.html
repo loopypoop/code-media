@@ -2,29 +2,32 @@
 
   <div class="articles">
     <ul class="content">
-      <a href=""><li *ngFor="let article of articles">
-        <div class="line"></div>
-        <div class="row">
-          <div class="col-5">
-            <img src="https://thecode.media/wp-content/uploads/2021/03/photo_2021-03-04-12.09.20-1080x718.jpeg" alt=""
-            width="100%" height="120%">
-          </div>
-          <div class="col-7">
-            <ul class="my-2">
-              <li class="llist type"><a href="">{{article.type}}</a></li>
-              <li class="llist difficulty"><a href=""
-              [class.red-border]="article.difficulty == 'Hard'"
-              [class.orange-border]="article.difficulty == 'Medium'"
-              [class.green-border]="article.difficulty == 'Easy'"
-              >Difficulty: {{article.difficulty}}</a></li>
-            </ul>
-            <div class="title">
-              <p class="h1">{{article.title}}</p><br>
-              <p class="h4">{{article.subtitle}}</p>
+      <li *ngFor="let article of articles">
+        <a href="">
+          <div class="line"></div>
+          <div class="row">
+            <div class="col-5">
+              <img src="{{article.img}}" alt=""
+                   width="100%" height="120%">
+            </div>
+            <div class="col-7">
+              <ul class="my-2">
+                <li class="llist type"><a href="">{{article.type}}</a></li>
+                <li class="llist difficulty"><a href=""
+                                                [class.red-border]="article.difficulty == 'Hard'"
+                                                [class.orange-border]="article.difficulty == 'Medium'"
+                                                [class.green-border]="article.difficulty == 'Easy'"
+                >Difficulty: {{article.difficulty}}</a></li>
+              </ul>
+              <div class="title">
+                <p class="h1">{{article.title}}</p><br>
+                <p class="h4">{{article.subtitle}}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </li></a>
+        </a>
+
+      </li>
     </ul>
   </div>
 </div>

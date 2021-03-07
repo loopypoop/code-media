@@ -8,25 +8,14 @@ import {HttpClient} from '@angular/common/http';
 })
 export class LastArticlesComponent implements OnInit {
 
-  difficulty: string;
   articles: any = [];
 
-  constructor(
-              private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this.difficulty = 'hard';
-    this.httpClient.get('assets/articles.json').subscribe(res => {
+    this.httpClient.get('assets/last-articles.json').subscribe(res => {
       this.articles = res;
       console.log(this.articles);
     });
   }
-
-  // allArticles() {
-  //   this.articleService.getArticles().subscribe(res => {
-  //     this.articles = res.data;
-  //     console.log('this.articles');
-  //     console.log(this.articles);
-  //   });
-  // }
 }

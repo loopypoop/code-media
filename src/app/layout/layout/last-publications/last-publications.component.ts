@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-last-publications',
@@ -8,11 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class LastPublicationsComponent implements OnInit {
 
   difficulty: string;
+  news: any = [];
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
     this.difficulty = 'hard';
+    this.httpClient.get('assets/last-news.json').subscribe(res => {
+      this.news = res;
+    });
   }
 
 }

@@ -11,6 +11,6 @@ export class ArticleService {
   }
 
   getArticles(): Observable<any> {
-    return this.http.get('assets/articles.json');
+    return this.http.get('assets/last-articles.json');
   }
 }
