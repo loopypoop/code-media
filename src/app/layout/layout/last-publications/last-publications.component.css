@@ -1,0 +1,67 @@
+.latest-article {
+  cursor: pointer;
+}
+
+.latest-article:hover .title {
+  color: red;
+  transition: 0.3s  ;
+}
+
+ul {
+  list-style-type: none;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.llist {
+  display: inline;
+  margin-right: 20px;
+  border: solid 1px #000;
+  padding: 10px 16px;
+}
+
+.news {
+  padding: 30px 0;
+  border-bottom: 2px solid #000;
+  cursor: pointer;
+}
+
+.news-title:hover {
+  color: red;
+  transition: 0.3s;
+}
+
+.news:hover {
+  color: red;
+  transition: 0.3s;
+}
+
+.date {
+  color: gray;
+  font-size: 18px;
+  margin: 20px 0 0 0;
+}
+
+.type:hover {
+  border: solid 1px red;
+  transition: 0.3s;
+}
+
+.difficulty {
+  border: solid 1px lightgray;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.red-border {
+  color: red;
+}
+
+.pl-10 {
+  padding-left: 100px;
+}

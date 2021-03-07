@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LastPublicationsComponent implements OnInit {
 
+  difficulty: string;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.difficulty = 'hard';
   }
 
 }
