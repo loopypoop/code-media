@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {ArticleService} from '../../../service/article.service';
+import {LogService} from '../../../service/log.service';
 
 @Component({
   selector: 'app-last-articles',
@@ -10,12 +11,13 @@ export class LastArticlesComponent implements OnInit {
 
   articles: any = [];
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private articleService: ArticleService,
+              private logService: LogService) { }
 
   ngOnInit(): void {
-    this.httpClient.get('assets/last-articles.json').subscribe(res => {
+    this.articleService.getArticles().subscribe(res => {
       this.articles = res;
-      console.log(this.articles);
+      this.logService.showLog(this.articles);
     });
   }
 }
