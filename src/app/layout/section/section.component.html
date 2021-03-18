@@ -1,0 +1,19 @@
+<div class="back">
+  <div class="container">
+    <div *ngIf="section" class="row title justify-content-between">
+      <div class="col-9">
+        <p class="h1 titles">{{section.type}}</p>
+        <p class="h5 titles">{{section.description}}</p>
+      </div>
+      <div class="col-3">
+        <img class="title-img" src="{{section.img}}" alt="" width="170px">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <app-section-list [sectionType]="sectionType"></app-section-list>
+</div>
+

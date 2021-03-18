@@ -1,0 +1,55 @@
+<div class="articles">
+  <ul class="content" *ngIf="sectionType != 'news'">
+    <li *ngFor="let article of articles; let i = index" [attr.data-index]="i">
+      <a [routerLink]="['/section/', sectionType, article.id]">
+        <div *ngIf="i != 0" class="line"></div>
+        <div class="row article-row">
+          <div class="col-5">
+            <div class="image-hover">
+              <img src="{{article.img}}" alt="">
+            </div>
+          </div>
+          <div class="col-7">
+            <ul class="my-2">
+              <li class="llist type"><a href="">{{article.type}}</a></li>
+              <li class="llist difficulty"><a href=""
+                                              [class.red-border]="article.difficulty == 'hard'"
+                                              [class.orange-border]="article.difficulty == 'medium'"
+                                              [class.green-border]="article.difficulty == 'easy'"
+              >Difficulty: {{article.difficulty}}</a></li>
+            </ul>
+            <div class="article-title">
+              <p class="h1">{{article.title}}</p><br>
+              <p class="h4">{{article.subtitle}}</p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </li>
+  </ul>
+  <ul class="content" *ngIf="sectionType == 'news'">
+    <li *ngFor="let item of news; let i = index" [attr.data-index]="i">
+      <a [routerLink]="['/section/', sectionType, item.id]">
+        <div *ngIf="i != 0" class="line"></div>
+        <div class="row article-row">
+          <div class="col-5">
+            <div class="image-hover">
+              <img src="{{item.img}}" alt="">
+            </div>
+          </div>
+          <div class="col-7">
+            <ul class="my-2">
+              <li class="llist type"><a href="">{{item.type}}</a></li>
+            </ul>
+            <div class="article-title">
+              <p class="h1">{{item.title}}</p><br>
+              <p class="h4">{{item.subtitle}}</p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </li>
+  </ul>
+</div>

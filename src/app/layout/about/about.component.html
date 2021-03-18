@@ -1,1 +1,62 @@
-<p>about works!</p>
+<div class="newsItem">
+  <div class="back">
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <img src="https://thecode.media/wp-content/uploads/2019/11/cover-fb.png" alt="">
+      </div>
+
+      <div class="desc">
+        <ul class="my-2">
+          <li class="llist type-ab"><a>Hello world!</a></li>
+        </ul>
+        <br><br>
+        <p class="h1 title">Who am I?</p><br>
+        <p class="h4 title">The student of 3rd course in IITU. You already know me...</p><br><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="content">
+      <h1>Code written by</h1>
+      <p>- Adil Kenesbekov -</p>
+      <p>- Adil Kenesbekov -</p>
+      <p>- Adil Kenesbekov -</p>
+      <p>- Adil Kenesbekov -</p>
+      <h1>Who made the original</h1>
+      <p>Illustrations - Danya Berkovsky</p>
+
+      <p>Design - Ksenia Maksimova</p>
+
+      <p>Website - Ilgiz Mavlyutov</p>
+
+      <p>Layout - Masha Dronova</p>
+    </div>
+
+    <h1>Also see</h1>
+    <div class="row">
+      <div class="col-4" *ngFor="let article of articles">
+        <div class="lasts" [routerLink]="['/section/', article.typeCode, article.id]">
+
+          <img class="l-img" src="{{article.img}}" alt="">
+
+          <ul class="my-2 l-ul">
+            <li class="llist type"><a>{{article.type}}</a></li>
+            <li class="llist difficulty"><a
+              [class.red-border]="article.difficulty == 'hard'"
+              [class.orange-border]="article.difficulty == 'medium'"
+              [class.green-border]="article.difficulty == 'easy'">
+              Difficulty: {{article.difficulty}}
+            </a>
+            </li>
+          </ul>
+
+          <h2 class="my-4">{{article.title}}</h2>
+          <p>{{article.subtitle}}</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

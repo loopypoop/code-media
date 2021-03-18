@@ -2,6 +2,10 @@
   cursor: pointer;
 }
 
+.latest-article:focus {
+  outline: 0;
+}
+
 .latest-article:hover .title {
   color: red;
   transition: 0.3s  ;
@@ -27,12 +31,24 @@ ul {
   cursor: pointer;
 }
 
+.news-noline {
+  padding: 30px 0;
+  cursor: pointer;
+}
+
+.news:focus {
+  outline: 0;
+}
+.news-noline:focus {
+  outline: 0;
+}
+
 .news-title:hover {
   color: red;
   transition: 0.3s;
 }
 
-.news:hover {
+.news:hover, .news-noline:hover {
   color: red;
   transition: 0.3s;
 }
@@ -60,6 +76,14 @@ a {
 
 .red-border {
   color: red;
+}
+
+.orange-border {
+  color: orange;
+}
+
+.green-border {
+  color: limegreen;
 }
 
 .pl-10 {

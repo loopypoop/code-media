@@ -3,7 +3,7 @@
   <div class="articles">
     <ul class="content">
       <li *ngFor="let article of articles">
-        <a href="">
+        <a [routerLink]="['/section/', article.typeCode, article.id]">
           <div class="line"></div>
           <div class="row">
             <div class="col-5">
@@ -14,9 +14,9 @@
               <ul class="my-2">
                 <li class="llist type"><a href="">{{article.type}}</a></li>
                 <li class="llist difficulty"><a href=""
-                                                [class.red-border]="article.difficulty == 'Hard'"
-                                                [class.orange-border]="article.difficulty == 'Medium'"
-                                                [class.green-border]="article.difficulty == 'Easy'"
+                                                [class.red-border]="article.difficulty == 'hard'"
+                                                [class.orange-border]="article.difficulty == 'medium'"
+                                                [class.green-border]="article.difficulty == 'easy'"
                 >Difficulty: {{article.difficulty}}</a></li>
               </ul>
               <div class="title">

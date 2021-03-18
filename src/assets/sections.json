@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "type": "News",
+    "typeCode": "news",
+    "img": "https://thecode.media/wp-content/uploads/2019/11/4-1.png",
+    "description": "Technology, programming, development and Elon Musk news"
+  },
+  {
+    "id": 2,
+    "type": "How to",
+    "typeCode": "how-to",
+    "img": "https://thecode.media/wp-content/uploads/2019/11/1-2.png",
+    "description": "How everything works in the world of IT and development. Explaining the last time"
+  },
+  {
+    "id": 3,
+    "type": "Problem",
+    "typeCode": "problem",
+    "img": "https://thecode.media/wp-content/uploads/2019/11/3-1.png",
+    "description": "Tasks that recruiters used to scare young programmers, and now we scare you"
+  },
+  {
+    "id": 4,
+    "type": "Questions",
+    "typeCode": "questions",
+    "img": "https://thecode.media/wp-content/uploads/2020/03/icon-code_5.png",
+    "description": "Shameful questions about the world of development and IT"
+  }
+]

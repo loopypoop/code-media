@@ -1,27 +1,30 @@
 <div class="container">
   <div class="row mb-5">
-    <div class="col-6 latest-article mt-5">
+    <div class="col-6 latest-article mt-5" [routerLink]="['/section/', lastArticle?.type, lastArticle?.id]">
 
       <div class="article-image">
-        <img src="https://thecode.media/wp-content/uploads/2021/03/photo_2021-03-05-13.50.43-1080x718.jpeg"
+        <img src="{{lastArticle?.img}}"
              width="550px" height="360px">
       </div>
       <br>
       <ul>
         <li class="llist type"><a href="">Problem</a></li>
-        <li class="llist difficulty"><a href="" [ngClass]="{'red-border': difficulty === 'hard'}">Difficulty: Hard</a></li>
+        <li class="llist difficulty"><a href="" [class.red-border]="lastArticle?.difficulty == 'hard'"
+                                        [class.orange-border]="lastArticle?.difficulty == 'medium'"
+                                        [class.green-border]="lastArticle?.difficulty == 'easy'">Difficulty: {{lastArticle?.difficulty}}</a></li>
       </ul>
 
-      <p class="h1 my-4 title">Problem: Travelbloggers in the plane</p>
-      <p class="h4 subtitle">How can they fly around the world?</p>
+      <p class="h1 my-4 title">{{lastArticle?.title}}</p>
+      <p class="h4 subtitle">{{lastArticle?.subtitle}}</p>
 
     </div>
 
     <div class="col-6 pl-10 pt-5">
-      <a href=""><div class="news-title h2">News</div></a>
+      <a [routerLink]="['section/news']"><div class="news-title h2">News</div></a>
       <ul>
-          <li *ngFor="let item of news">
-            <div class="news">
+          <li *ngFor="let item of news | sortByDate; let i = index" [attr.data-index]="i">
+            <div [class.news-noline]="i == 2"
+                 [class.news]="i < 2" [routerLink]="['/section/', item.typeCode, item.id]">
               <p class="h5">{{item.title}}</p>
               <p class="date">{{item.date | date}}</p>
             </div>

@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+.image-hover {
+  display: block;
+  width: 450px;
+  height: 300px;
+  position: relative;
+  transition: all ease 0.1s;
+}
+
+.image-hover img {
+  width: 100%;
+  height: 100%;
+}
+
+.image-hover:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 40px solid red;
+  opacity: 0;
+  transition: all ease 0.2s;
+}
+
+.image-hover:hover:after {
+  opacity: 1;
+}

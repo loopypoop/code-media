@@ -1,0 +1,50 @@
+<div class="article" *ngIf="article">
+  <div class="back">
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <img src="{{article.img}}" alt="">
+      </div>
+
+      <div class="desc">
+        <ul class="my-2">
+          <li class="llist type"><a>{{article.type}}</a></li>
+          <li class="llist difficulty"><a
+            [class.red-border]="article.difficulty == 'hard'"
+            [class.orange-border]="article.difficulty == 'medium'"
+            [class.green-border]="article.difficulty == 'easy'"
+          >Difficulty: {{article.difficulty}}</a></li>
+        </ul>
+        <br><br>
+        <p class="h1 title">{{article.title}}</p><br>
+        <p class="h4 title">{{article.subtitle}}</p><br><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="content">{{article.content}}</p>
+  </div>
+</div>
+
+<div class="newsItem" *ngIf="newsItem">
+  <div class="back">
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <img src="{{newsItem.img}}" alt="">
+      </div>
+
+      <div class="desc">
+        <ul class="my-2">
+          <li class="llist type"><a>{{newsItem.type}}</a></li>
+        </ul>
+        <br><br>
+        <p class="h1 title">{{newsItem.title}}</p><br>
+        <p class="h4 title">{{newsItem.subtitle}}</p><br><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="content">{{newsItem.content}}</p>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.footer {
+  background-color: #2d2838;
+  height: 100px;
+}
+
+.container {
+  position: relative;
+  top: 30px;
+}
+
+a {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: cursive;
+}
+

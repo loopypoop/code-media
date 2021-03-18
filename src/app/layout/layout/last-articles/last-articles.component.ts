@@ -9,7 +9,7 @@ import {LogService} from '../../../service/log.service';
 })
 export class LastArticlesComponent implements OnInit {
 
-  articles: any = [];
+  articles: any[];
 
   constructor(private articleService: ArticleService,
               private logService: LogService) { }
@@ -17,7 +17,8 @@ export class LastArticlesComponent implements OnInit {
   ngOnInit(): void {
     this.articleService.getArticles().subscribe(res => {
       this.articles = res;
-      this.logService.showLog(this.articles);
+      this.articles.shift();
+      // this.logService.showLog(this.articles);
     });
   }
 }

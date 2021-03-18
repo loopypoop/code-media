@@ -18,15 +18,9 @@ img {
   border: solid 1px #605e5e;
 }
 
-.type-ab {
+.type {
   border: solid 1px white;
   color: white;
-  cursor: pointer;
-}
-
-.type {
-  border: solid 1px black;
-  color: black;
   cursor: pointer;
 }
 
@@ -66,26 +60,4 @@ img {
   font-size: 25px;
   margin: 50px 100px;
   font-family: Calibri;
-}
-
-.l-img {
-  width: 100%;
-  margin: 30px 0;
-}
-
-.l-ul {
-  padding-left: 0!important;
-}
-
-.lasts {
-  cursor: pointer;
-}
-
-.lasts:hover {
-  color: red;
-  transition: 0.2s;
-}
-
-.lasts:focus {
-  outline: 0;
 }
