@@ -7,6 +7,7 @@ import {HomeModule} from './layout/home.module';
 import { SectionComponent } from './section/section.component';
 import { SectionListComponent } from './section/section-list/section-list.component';
 import { SectionDetailsComponent } from './section/section-details/section-details.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SectionDetailsComponent } from './section/section-details/section-detai
     LayoutComponent,
     SectionComponent,
     SectionListComponent,
-    SectionDetailsComponent
+    SectionDetailsComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,

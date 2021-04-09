@@ -30,3 +30,7 @@ a {
 li {
   height: 68px;
 }
+
+.authorize:hover {
+  font-weight: bold;
+}

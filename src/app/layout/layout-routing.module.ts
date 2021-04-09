@@ -5,6 +5,9 @@ import {LayoutComponent} from './layout/layout.component';
 import {AboutComponent} from './about/about.component';
 import {SectionComponent} from './section/section.component';
 import {SectionDetailsComponent} from './section/section-details/section-details.component';
+import {LoginComponent} from './login/login.component';
+import {LoginGuard} from './guards/login.guard';
+import {ExitLoginGuard} from './guards/exit.login.guard';
 
 const routes: Routes = [
   {
@@ -17,7 +20,13 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    canActivate: [LoginGuard]
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    canDeactivate: [ExitLoginGuard]
   },
   {
     path: 'section/:sectionType/:id',
@@ -37,6 +46,7 @@ const routes: Routes = [
   ],
   exports: [
     RouterModule
-  ]
+  ],
+  providers: [ExitLoginGuard]
 })
 export class LayoutRoutingModule { }
