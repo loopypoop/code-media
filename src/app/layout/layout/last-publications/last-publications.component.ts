@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {NewsService} from '../../../service/news.service';
 import {LogService} from '../../../service/log.service';
-import {ArticleService} from '../../../service/article.service';
+import {DbService} from '../../../service/db.service';
 
 @Component({
   selector: 'app-last-publications',
@@ -15,12 +14,11 @@ export class LastPublicationsComponent implements OnInit {
   articles: any[];
   lastArticle: any;
 
-  constructor(private newsService: NewsService,
-              private logService: LogService,
-              private articleService: ArticleService) { }
+  constructor(private dbService: DbService,
+              private logService: LogService) { }
 
   ngOnInit(): void {
-    this.newsService.getNews().subscribe(res => {
+    this.dbService.getNews().subscribe(res => {
       let i = 0;
       res.forEach(result => {
         if (i < 3) {
@@ -34,7 +32,7 @@ export class LastPublicationsComponent implements OnInit {
   }
 
   getLastArticle(): any {
-    this.articleService.getArticles().subscribe(res => {
+    this.dbService.getArticles().subscribe(res => {
       this.articles = res;
       this.articles.forEach(article => {
         if (article.id === 1) {

@@ -1,0 +1,14 @@
+{
+  "/last-articles": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/last-news": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/sections": {
+    "target": "http://localhost:3000",
+    "secure": false
+  }
+}

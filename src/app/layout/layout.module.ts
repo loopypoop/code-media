@@ -8,6 +8,7 @@ import { SectionComponent } from './section/section.component';
 import { SectionListComponent } from './section/section-list/section-list.component';
 import { SectionDetailsComponent } from './section/section-details/section-details.component';
 import { LoginComponent } from './login/login.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -19,10 +20,11 @@ import { LoginComponent } from './login/login.component';
     SectionDetailsComponent,
     LoginComponent
   ],
-  imports: [
-    CommonModule,
-    LayoutRoutingModule,
-    HomeModule
-  ]
+    imports: [
+        CommonModule,
+        LayoutRoutingModule,
+        HomeModule,
+        ReactiveFormsModule
+    ]
 })
 export class LayoutModule { }

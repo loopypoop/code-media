@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SectionService} from '../../../service/section.service';
+import {DbService} from '../../../service/db.service';
 
 @Component({
   selector: 'app-header',
@@ -10,14 +10,14 @@ export class HeaderComponent implements OnInit {
 
   sections: any[];
 
-  constructor(private sectionService: SectionService) { }
+  constructor(private dbService: DbService) { }
 
   ngOnInit(): void {
     this.getSections();
   }
 
   getSections(): void {
-    this.sectionService.getSections().subscribe(res => {
+    this.dbService.getSections().subscribe(res => {
       this.sections = res;
     });
   }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {ArticleService} from '../../../service/article.service';
-import {NewsService} from '../../../service/news.service';
+import {DbService} from '../../../service/db.service';
 
 @Component({
   selector: 'app-section-details',
@@ -16,8 +15,7 @@ export class SectionDetailsComponent implements OnInit {
   newsItem: any;
 
   constructor(private route: ActivatedRoute,
-              private articleService: ArticleService,
-              private newsService: NewsService) {
+              private dbService: DbService) {
     this.route.params.subscribe(params => {
       this.sectionType = params['sectionType'];
       this.id = parseInt(params['id'], 10);
@@ -30,7 +28,7 @@ export class SectionDetailsComponent implements OnInit {
 
   getContent(): void {
     if (this.sectionType !== 'news') {
-      this.articleService.getArticles().subscribe(res => {
+      this.dbService.getArticles().subscribe(res => {
         res.forEach(article => {
           if (article.id === this.id) {
             this.article = article;
@@ -38,7 +36,7 @@ export class SectionDetailsComponent implements OnInit {
         });
       });
     } else {
-      this.newsService.getNews().subscribe(res => {
+      this.dbService.getNews().subscribe(res => {
         res.forEach(newsItem => {
           if (newsItem.id === this.id) {
             this.newsItem = newsItem;

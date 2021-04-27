@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ArticleService} from '../../../service/article.service';
 import {LogService} from '../../../service/log.service';
+import {DbService} from '../../../service/db.service';
 
 @Component({
   selector: 'app-last-articles',
@@ -11,11 +11,11 @@ export class LastArticlesComponent implements OnInit {
 
   articles: any[];
 
-  constructor(private articleService: ArticleService,
+  constructor(private dbService: DbService,
               private logService: LogService) { }
 
   ngOnInit(): void {
-    this.articleService.getArticles().subscribe(res => {
+    this.dbService.getArticles().subscribe(res => {
       this.articles = res;
       this.articles.shift();
       // this.logService.showLog(this.articles);

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ArticleService} from '../../service/article.service';
-import {LogService} from '../../service/log.service';
 import {ActivatedRoute} from '@angular/router';
-import {SectionService} from '../../service/section.service';
+import {DbService} from '../../service/db.service';
 
 @Component({
   selector: 'app-section',
@@ -15,7 +13,7 @@ export class SectionComponent implements OnInit {
   section: any;
 
   constructor(private route: ActivatedRoute,
-              private sectionService: SectionService) {
+              private dbService: DbService) {
   }
 
   ngOnInit(): void {
@@ -26,7 +24,7 @@ export class SectionComponent implements OnInit {
   }
 
   getSection(): void {
-    this.sectionService.getSections().subscribe(res => {
+    this.dbService.getSections().subscribe(res => {
       res.forEach(result => {
         if (result.typeCode === this.sectionType) {
           this.section = result;

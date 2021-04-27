@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ArticleService} from '../../service/article.service';
+import {DbService} from '../../service/db.service';
 
 @Component({
   selector: 'app-about',
@@ -10,14 +10,14 @@ export class AboutComponent implements OnInit {
 
   articles: any = [];
 
-  constructor(private articleService: ArticleService) { }
+  constructor(private dbService: DbService) { }
 
   ngOnInit(): void {
     this.getArticles();
   }
 
   getArticles(): void {
-    this.articleService.getArticles().subscribe(res => {
+    this.dbService.getArticles().subscribe(res => {
       let i = 1;
       res.forEach(result => {
         if (i <= 3) {
@@ -27,5 +27,4 @@ export class AboutComponent implements OnInit {
       });
     });
   }
-
 }
